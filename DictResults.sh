@@ -1,0 +1,22 @@
+#!/bin/bash -x
+echo "Enter Value for a :"
+read a
+echo "Enter Value for b :"
+read b
+echo "Enter Value for c :"
+read c
+
+result1=$(( $a + $b * $c))
+echo "Result1 is: " $result1
+result2=$(( $a * $b + $c))
+echo "Result2 is: " $result2
+result3=$(( $c + $a / $b ))
+echo "Result3 is: " $result3
+result4=$(( $a % $b + $c))
+echo "Result4 is: " $result4
+
+declare -A dictinary
+dictionary[result1]=$result1
+dictionary[result2]=$result2
+dictionary[result3]=$result3
+dictionary[result4]=$result4
